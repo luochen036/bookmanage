@@ -1,0 +1,75 @@
+{% extends 'book_list.html' %}
+{% block title %}
+    <title>作者管理</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/manage/">图书管理</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/author/">作者管理</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/publish/">出版社管理</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled">待开发</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                 <div class="panel-heading">
+                     <h3 class="panel-title"><i class="bi bi-person-fill"></i>作者管理</h3>
+                 </div>
+                <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'image/background2.jpg' %});background-size: cover;background-position: center">
+                  <div class="container">
+                    <h1 class="display-4">欢迎来到作者管理</h1>
+                    <p class="lead">在这里你可以查询到作者的各种信息，并进行编辑和删除等操作</p>
+                  </div>
+                </div>
+                <a href="/addauthor/" class="btn btn-outline-success mb-1"><span class="bi bi-plus-circle"></span>添加作者</a>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">编号</th>
+                        <th scope="col">姓名</th>
+                        <th scope="col">年龄</th>
+                        <th scope="col">电话</th>
+                        <th scope="col">贡献书籍</th>
+                        <th scope="col">地址</th>
+                        <th scope="col">邮箱</th>
+                        <th scope="col"> </th>
+                        <th scope="col"> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for author in authors %}
+                            <tr>
+                                <th scope="row">{{ author.pk }}</th>
+                                <td>{{ author.name }}</td>
+                                <td>{{ author.age }}</td>
+                                <td>{{ author.detail.phone }}</td>
+                                <td>
+                                    {% for book in author.books.all %}
+                                        《{{ book.title }}》
+                                    {% endfor %}
+                                </td>
+                                <td>{{ author.detail.address }}</td>
+                                <td>{{ author.email }}</td>
+                                <td><a class="btn btn-primary btn-sm" href="/editauthor/{{ author.pk }}">编辑</a></td>
+                                <td><button class="btn btn-danger btn-sm deleteauthor_btn" id="{{ author.pk }}">删除</button></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

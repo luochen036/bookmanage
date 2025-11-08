@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>首页</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.13.1/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.6.2-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lunbotu.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">图书管理系统</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="bi bi-list"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/index/">首页</a>
+              <a class="nav-link" href="/manage/">管理</a>
+              <a class="nav-link" href="#">待开发</a>
+              <a class="nav-link btn-sm btn-outline-success" id="music">开启背景音乐</a>
+            </div>
+          </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="margin: 10px"><a href="/register/">注册</a></li>
+                <li style="margin: 10px"><a href="/login/">登录</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block main %}
+        <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'image/background2.jpg' %});background-size: cover;background-position: center">
+            <div class="container">
+                <h1 class="display-4">洛尘的图书管理系统</h1>
+                <p class="lead">这是一个功能齐全的图书管理系统，你可以在这里实现一些最基本的操作</p>
+            </div>
+        </div>
+        <div id="lunbotu">
+                <img src="{% static 'image/book1.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book2.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book3.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book4.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book5.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book6.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book1.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book2.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book3.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book4.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book5.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book6.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px;">
+                <img src="{% static 'image/book7.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book8.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book9.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book10.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book11.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book12.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book7.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book8.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book9.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book10.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book11.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+                <img src="{% static 'image/book12.jpg' %}" class="rounded float-left" alt="..." width="200" height="200" style="margin: 5px 10px 0 15px">
+        </div>
+
+    {% endblock %}
+    <audio src="{% static 'music/Bloom.mp3' %}" preload="auto" loop></audio>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.6.2-dist/js/bootstrap.min.js' %}"></script>
+    <script>
+            $('.deletebook_btn').click(function () {
+                $.ajax({
+                    url: '/deletebook/',
+                    type: 'post',
+                    data:{
+                        book_id: $(this).attr('id'),
+                        csrfmiddlewaretoken:'{{ csrf_token }}'
+                    },
+                    success: function (res) 
+                    {
+                       if(res.code === 200)
+                       {
+                           alert('删除成功')
+                           location.reload()
+                       }
+                       
+                    }
+                })
+            })
+            $('.deletepublish_btn').click(function () {
+                $.ajax({
+                    url: '/deletepublish/',
+                    type: 'post',
+                    data:{
+                        publish_id: $(this).attr('id'),
+                        csrfmiddlewaretoken:'{{ csrf_token }}'
+                    },
+                    success: function (res) 
+                    {
+                       if(res.code === 200)
+                       {
+                           alert('删除成功')
+                           location.reload()
+                       }
+                       
+                    }
+                })
+            })
+            $('.deleteauthor_btn').click(function () {
+                $.ajax({
+                    url: '/deleteauthor/',
+                    type: 'post',
+                    data:{
+                        author_id: $(this).attr('id'),
+                        csrfmiddlewaretoken:'{{ csrf_token }}'
+                    },
+                    success: function (res) 
+                    {
+                       if(res.code === 200)
+                       {
+                           alert('删除成功')
+                           location.reload()
+                       }
+                       
+                    }
+                })
+            })
+            $('#music').click(function () {
+                if($(this).text() === '开启背景音乐')
+                {
+                    $(this).text('关闭背景音乐')
+                    $('audio').trigger('play')
+                }
+                else
+                {
+                    $(this).text('开启背景音乐')
+                    $('audio').trigger('pause')
+                }
+            })
+    </script>
+</body>
+</html>

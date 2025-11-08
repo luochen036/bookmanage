@@ -1,0 +1,23 @@
+#lunbotu {
+    width: 2750px;
+    height: 400px;
+    overflow: hidden;
+    animation: move 25s infinite linear;
+}
+body {
+    overflow: hidden;
+}
+
+@keyframes move {
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-1300px);
+    }
+
+
+
+}
