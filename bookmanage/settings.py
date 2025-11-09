@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bookmanage',
         'USER': 'root',
-        'PASSWORD': 'cl210613',
+        'PASSWORD': '*******',
         'HOST': 'localhost',
         'CHARSET': 'utf8mb4'
     }
